@@ -477,8 +477,8 @@ class RangeEdit(tk.Frame):
         self.fileTree.heading("one", text="Date Modified", anchor=tk.W)
 
         self.fileTree.insert("",0, "dir1",text="Open",values=(""))
-        self.fileTree.insert("",1, "dir2",text="Facing Open",values=(""))
-        self.fileTree.insert("",2, "dir3",text="Facing 3Bet",values=(""))
+        self.fileTree.insert("",1, "dir2",text="3Bet",values=(""))
+        self.fileTree.insert("",2, "dir3",text="vs 3Bet",values=(""))
         self.fileTree.insert("","end", "dir4",text="Facing 4Bet",values=(""))
 
         if not range_dir:
