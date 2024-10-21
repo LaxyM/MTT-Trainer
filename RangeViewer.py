@@ -217,9 +217,11 @@ class RangeViewer(tk.Frame):
 class CallViewer(RangeViewer):
     def __init__(self, parent, theme):
         super().__init__(parent, theme)
-        self.colors = color_gradient(self.bg_color, '#8D6801')
+        # self.colors = color_gradient(self.bg_color, '#8D6801')
+        self.colors = color_gradient(self.bg_color, '#5AB966')
     
 class RaiseViewer(RangeViewer):
     def __init__(self, parent, theme):
         super().__init__(parent, theme) 
-        self.colors = color_gradient(self.bg_color, '#82204A')
+        # self.colors = color_gradient(self.bg_color, '#82204A')
+        self.colors = color_gradient(self.bg_color, '#F03C3C')
