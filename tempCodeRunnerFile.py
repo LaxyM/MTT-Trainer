@@ -1,5 +1,4 @@
-
-# def round_to_nearest_five(num):
+def round_to_nearest_five(num):
 #     # Округляем до ближайшего 0.05
 #     return round(num * 20) / 20
 
@@ -28,9 +27,6 @@
 #     # Объединяем результаты в одну строку без пробелов
 #     return ','.join(result)
 
-# # Пример данных
-# input_string = "AA,KK,QQ,JJ,TT,99,88,77,66,55,44:0.5203,33:0.001,AK,AQ,AJ,AT,A9s,A9o:0.2877,A8s,A7s,A6s,A5s,A4s,A3s,A2s,KQ,KJs,KJo:0.8854,KTs,KTo:0.6262,K9s,K8s,K7s:0.498,K6s:0.9996,QJs,QJo:0.1013,QTs,QTo:0.2549,Q9s,JTs,JTo:0.2065,J9s,J8s:0.6406,T9s,T8s,98s,97s:0.4166,87s,76s:0.9983,65s:0.7493"
-
-# # Форматирование весов в нужный формат
-# formatted_weights = format_weights(input_string)
-# print(formatted_weights)
+#     # Форматирование весов в нужный формат
+#     formatted_weights = format_weights(input_string)
+#     print(formatted_weights)
