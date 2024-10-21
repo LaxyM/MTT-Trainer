@@ -27,33 +27,12 @@
 #         return f'{card2}{card1}'
 #     return f'{card1}{card2}'
 
-def expand_range(range_str):
-    valid_hands = []
-    
-    # Обработка пар (например, AA-22)
-    if '-' in range_str:
-        start, end = range_str.split('-')
-        if start == end:  # Обрабатываем одиночную комбинацию (например, AA)
-            return [start]
-        elif len(start) == 2 and len(end) == 2:  # Диапазон пар (например, AA-22)
-            ranks = 'AKQJT98765432'
-            start_idx = ranks.index(start[0])
-            end_idx = ranks.index(end[0])
-            valid_hands.extend([f'{rank}{rank}' for rank in ranks[start_idx:end_idx+1]])
-        elif len(start) == 3 and len(end) == 3:  # Диапазон одномастных/разномастных (например, AKs-A2s)
-            ranks = 'AKQJT98765432'
-            start_idx = ranks.index(start[0])
-            end_idx = ranks.index(end[0])
-            suit_type = start[2]  # "s" для одномастных, "o" для разномастных
-            valid_hands.extend([f'{r1}{r2}{suit_type}' for r1 in ranks[start_idx:end_idx+1] for r2 in ranks[start_idx+1:]])
-    else:
-        valid_hands.append(range_str)  # Обрабатываем одиночную комбинацию (например, 65s)
-    
-    return valid_hands
 
-import random
+
 
 #!  актуальная версия стартеров которые будут раздаваться
+import random
+
 def deal_hand():
     suit_dict = {0: 's', 1:'c', 2:'h', 3:'d'}
     value_dict = {10:'T', 11:'J', 12:'Q', 13:'K', 14:'A'}
@@ -68,12 +47,26 @@ def deal_hand():
         return f'{value}{suit}'
 
     #  комбинации карт (45,6%)
-    range_str = '77-66,ATo,A8o-A7o'
-    
-    valid_hands = []
-    for part in range_str.split(','):
-        valid_hands.extend(expand_range(part))
-    
+    valid_hands = [
+    'AA', 'KK', 'QQ', 'JJ', 'TT', '99', '88', '77', '66', '55', '44', '33', '22',
+    'AKs', 'AQs', 'AJs', 'ATs', 'A9s', 'A8s', 'A7s', 'A6s', 'A5s', 'A4s', 'A3s', 'A2s',
+    'AKo', 'AQo', 'AJo', 'ATo', 'A9o', 'A8o', 'A7o', 'A6o', 'A5o', 'A4o', 'A3o', 'A2o',
+    'KQs', 'KJs', 'KTs', 'K9s', 'K8s', 'K7s', 'K6s', 'K5s', 'K4s', 'K3s', 'K2s',
+    'KQo', 'KJo', 'KTo', 'K9o', 'K8o', 'K7o', 'K6o', 'K5o', 'K4o', 'K3o', 'K2o',
+    'QJs', 'QTs', 'Q9s', 'Q8s', 'Q7s', 'Q6s', 'Q5s', 'Q4s', 'Q3s',
+    'QJo', 'QTo', 'Q9o', 'Q8o',
+    'JTs', 'J9s', 'J8s', 'J7s', 'J6s', 'J5s',
+    'JTo', 'J9o', 'J8o',
+    'T9s', 'T8s', 'T7s', 'T6s',
+    'T9o', 'T8o',
+    '98s', '97s', '96s',
+    '98o',
+    '87s', '86s', 
+    '76s', '75s', 
+    '65s',
+]
+
+
     # Проверка, входит ли пара карт в диапазон
     def is_valid_hand(card1, card2):
         hand = f'{card1[0]}{card2[0]}'
@@ -97,7 +90,6 @@ def deal_hand():
                 if num2 % 13 > num1 % 13:
                     return f'{card2}{card1}'
                 return f'{card1}{card2}'
-
 
 
 
