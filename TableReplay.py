@@ -114,25 +114,75 @@ class TableReplay(tk.Canvas):
         strdraw_idx = (4 - heropos_idx) % 8  # Обновлено на 8
         self.btn_img = self.create_image(TableReplay.btn_x[strdraw_idx], TableReplay.btn_y[strdraw_idx], anchor='nw', image=self.bn_marker)
         
+        # # update raise and open chips, and delete overlapping images
+        # if self.vilchips_img:
+        #     self.delete(self.vilchips_img)
+        # if self.herochips_img:
+        #     self.delete(self.herochips_img)
+            
+        # if self.situation_index == 1:
+        #     strdraw_idx = (vilpos_idx + 4 - heropos_idx) % 8  # Обновлено на 8
+        #     self.vilchips_img = self.create_image(TableReplay.chippos_x[strdraw_idx], TableReplay.chippos_y[strdraw_idx], anchor='nw', image=self.chips_2p5bb)
+        # elif self.situation_index == 2:
+        #     strdraw_idx = 4
+        #     self.herochips_img = self.create_image(TableReplay.chippos_x[strdraw_idx], TableReplay.chippos_y[strdraw_idx], anchor='nw', image=self.chips_2p5bb)
+        #     strdraw_idx = (vilpos_idx + 4 - heropos_idx) % 8  # Обновлено на 8
+        #     self.vilchips_img = self.create_image(TableReplay.chippos_x[strdraw_idx], TableReplay.chippos_y[strdraw_idx], anchor='nw', image=self.chips_8bb)
+        # else:
+        #     strdraw_idx = 4
+        #     self.herochips_img = self.create_image(TableReplay.chippos_x[strdraw_idx], TableReplay.chippos_y[strdraw_idx], anchor='nw', image=self.chips_8bb)
+        #     strdraw_idx = (vilpos_idx + 4 - heropos_idx) % 8  # Обновлено на 8
+        #     self.vilchips_img = self.create_image(TableReplay.chippos_x[strdraw_idx], TableReplay.chippos_y[strdraw_idx], anchor='nw', image=self.chips_22bb) 
+
+
+
+
+
         # update raise and open chips, and delete overlapping images
         if self.vilchips_img:
             self.delete(self.vilchips_img)
         if self.herochips_img:
             self.delete(self.herochips_img)
             
-        if self.situation_index == 1:
-            strdraw_idx = (vilpos_idx + 4 - heropos_idx) % 8  # Обновлено на 8
-            self.vilchips_img = self.create_image(TableReplay.chippos_x[strdraw_idx], TableReplay.chippos_y[strdraw_idx], anchor='nw', image=self.chips_2p5bb)
+        if self.situation_index == 0:
+            pass
+        
+        elif self.situation_index == 1:
+            strdraw_idx = (vilpos_idx + 4 - heropos_idx) % 8
+            self.vilchips_img = self.create_image(TableReplay.chippos_x[strdraw_idx], TableReplay.chippos_y[strdraw_idx], anchor = 'nw', image=self.chips_2p5bb)
+            if vilpos_idx == 1:
+                self.delete(self.sb_img)
+                
         elif self.situation_index == 2:
             strdraw_idx = 4
-            self.herochips_img = self.create_image(TableReplay.chippos_x[strdraw_idx], TableReplay.chippos_y[strdraw_idx], anchor='nw', image=self.chips_2p5bb)
-            strdraw_idx = (vilpos_idx + 4 - heropos_idx) % 8  # Обновлено на 8
-            self.vilchips_img = self.create_image(TableReplay.chippos_x[strdraw_idx], TableReplay.chippos_y[strdraw_idx], anchor='nw', image=self.chips_8bb)
+            self.herochips_img =self.create_image(TableReplay.chippos_x[strdraw_idx], TableReplay.chippos_y[strdraw_idx], anchor = 'nw', image=self.chips_2p5bb)
+            strdraw_idx = (vilpos_idx + 4 - heropos_idx) % 8
+            self.vilchips_img = self.create_image(TableReplay.chippos_x[strdraw_idx], TableReplay.chippos_y[strdraw_idx], anchor = 'nw', image=self.chips_8bb)
+            if heropos_idx == 1:
+                self.delete(self.sb_img)
+            if vilpos_idx == 1:
+                self.delete(self.sb_img)
+            if vilpos_idx == 2:
+                self.delete(self.bb_img)
+            
         else:
             strdraw_idx = 4
-            self.herochips_img = self.create_image(TableReplay.chippos_x[strdraw_idx], TableReplay.chippos_y[strdraw_idx], anchor='nw', image=self.chips_8bb)
-            strdraw_idx = (vilpos_idx + 4 - heropos_idx) % 8  # Обновлено на 8
-            self.vilchips_img = self.create_image(TableReplay.chippos_x[strdraw_idx], TableReplay.chippos_y[strdraw_idx], anchor='nw', image=self.chips_22bb) 
+            self.herochips_img = self.create_image(TableReplay.chippos_x[strdraw_idx], TableReplay.chippos_y[strdraw_idx], anchor = 'nw', image=self.chips_8bb)
+            strdraw_idx = (vilpos_idx + 4 - heropos_idx) % 8
+            self.vilchips_img = self.create_image(TableReplay.chippos_x[strdraw_idx], TableReplay.chippos_y[strdraw_idx], anchor = 'nw', image=self.chips_22bb)
+            if heropos_idx == 1:
+                self.delete(self.sb_img)
+            if heropos_idx == 2:
+                self.delete(self.bb_img)  
+            if vilpos_idx == 1:
+                self.delete(self.sb_img)
+            
+
+
+
+
+
+
 
         # draw hand
         self.itemconfigure(self.hand1crd_img, text=self.herocards[0])
