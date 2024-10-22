@@ -8,20 +8,21 @@ import os
 
 class TableReplay(tk.Canvas):
     
-    pos_str = ('BN','SB','BB','EP','MP','CO')
+    pos_str = ('BN','SB','BB','UTG','EP','MP','HJ','CO')  # Добавлены UTG и HJ
     suits = {'c': '#00A318', 's': '#000000', 'h': '#FF3333', 'd': '#0093FB'}
     
-    # coordinates for placing objects on table
-    chippos_x = (205,360,500,505,350,198)
-    chippos_y = (140,110,142,235,265,240)
-    btn_x = (155,315,575,559,415,179)
-    btn_y = (160,105,160,285,309,289)
-    labelpos_x = (162,447,629,634,343,161)
-    labelpos_y = (143,75,143,304,397,304)
-        
+    # Обновленные координаты для 8-макс стола
+    chippos_x = (205, 360, 500, 630, 505, 350, 270, 198)
+    chippos_y = (140, 110, 142, 185, 235, 265, 220, 240)
+    btn_x = (155, 315, 575, 710, 559, 415, 305, 179)
+    btn_y = (160, 105, 160, 205, 285, 309, 250, 289)
+    labelpos_x = (162, 447, 629, 715, 634, 343, 265, 161)
+    labelpos_y = (143, 75, 143, 220, 304, 397, 330, 304)
     def __init__(self, parent, heropos, vilpos, situation_index, herocards, theme, **kwargs):
 
         tk.Canvas.__init__(self, parent, width=765, height=440, bg=theme.bgcolor, highlightbackground=theme.bgcolor, highlightcolor=theme.bgcolor, highlightthickness=0, bd=0)
+
+        
 
         # defines the preflop situation/positions
         self.heropos = heropos

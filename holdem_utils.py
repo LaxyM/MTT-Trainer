@@ -104,26 +104,26 @@ def deal_hand():
 def deal_pos():
     import random  
     
-    positions_dict = {0: "EP", 1: "MP", 2: "CO", 3: "BN", 4: "SB", 5: "BB"}
+    positions_dict = {0: "UTG", 1: "EP", 2: "MP", 3: "HJ", 4: "CO", 5: "BN", 6: "SB", 7: "BB"}
     tree_dict = {0: "Open", 1: "Facing Open", 2: "Facing 3Bet", 3: "Facing 4Bet"}
     
-
-
-    #! Изменение позиции
-    pos1 = random.randint(0,5)
+    #! Изменение позиции для 8 игроков
+    pos1 = random.randint(0, 7)
     while True:
-        pos2 = random.randint(0,5)
-        if pos1 != pos2: break
-    tree = random.randint(0,3)
+        pos2 = random.randint(0, 7)
+        if pos1 != pos2: 
+            break
+    tree = random.randint(0, 3)
     
-
     if tree in [0, 2]:
         if pos1 > pos2:
             return (tree, positions_dict[pos2], positions_dict[pos1], tree_dict[tree])
     else:
         if pos1 < pos2:
             return (tree, positions_dict[pos2], positions_dict[pos1], tree_dict[tree])
+    
     return (tree, positions_dict[pos1], positions_dict[pos2], tree_dict[tree])
+
 
 """
 # Function that determines whether a given hand is within a given hand range.
