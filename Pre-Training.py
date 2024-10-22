@@ -197,9 +197,9 @@ class StartPage(tk.Frame):
 
         self.sgraph = SliderGraphical(trainingInterface, theme)
         self.okayBtn = cButton(trainingInterface, "Enter", self.get_options, theme)
-        self.raiseBtn = cButton(trainingInterface, '         Pure Raise         ', lambda: self.pureraise(self), theme)
-        self.callBtn = cButton(trainingInterface, '         Pure Call         ', lambda: self.purecall(self), theme)
-        self.foldBtn = cButton(trainingInterface, '         Pure Fold         ', lambda: self.purefold(self), theme)
+        self.raiseBtn = cButton(trainingInterface, '          Raise         ', lambda: self.pureraise(self), theme)
+        self.callBtn = cButton(trainingInterface, '          Call         ', lambda: self.purecall(self), theme)
+        self.foldBtn = cButton(trainingInterface, '          Fold         ', lambda: self.purefold(self), theme)
         self.sgraph.grid(row=0, column=0, columnspan=3, padx=0, pady=1)
         self.okayBtn.grid(row=0, column=3, padx=5, pady=2, sticky='S')
         self.raiseBtn.grid(row=1, column=0, padx=3, pady=2)
