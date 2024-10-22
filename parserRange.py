@@ -30,7 +30,7 @@ def format_weights(input_string):
     return ','.join(result)
 
 # Пример данных
-input_string = "AA,KK,QQ,JJ,TT,99,88,77,66,55,44:0.5203,33:0.001,AK,AQ,AJ,AT,A9s,A9o:0.2877,A8s,A7s,A6s,A5s,A4s,A3s,A2s,KQ,KJs,KJo:0.8854,KTs,KTo:0.6262,K9s,K8s,K7s:0.498,K6s:0.9996,QJs,QJo:0.1013,QTs,QTo:0.2549,Q9s,JTs,JTo:0.2065,J9s,J8s:0.6406,T9s,T8s,98s,97s:0.4166,87s,76s:0.9983,65s:0.7493"
+input_string = "AA,KK,QQ,JJ,TT,99,88,77,66,55,44,33:0.0675,AK,AQ,AJ,AT,A9,A8s,A7s,A6s,A5s,A4s,A3s,A2s,KQ,KJ,KT,K9s,K8s,K7s,K6s,K5s:0.962,QJs,QJo:0.602,QTs,QTo:0.4537,Q9s,Q8s,JTs,JTo:0.623,J9s,J8s,T9s,T8s,T7s:0.5725,98s,97s,87s,86s:0.4472,76s,65s,54s:0.2252"
 
 # Форматирование весов в нужный формат
 formatted_weights = format_weights(input_string)
