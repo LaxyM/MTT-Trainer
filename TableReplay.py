@@ -16,8 +16,8 @@ class TableReplay(tk.Canvas):
     chippos_y = (140, 110, 142, 185, 235, 265, 220, 240)
     btn_x = (155, 315, 575, 710, 559, 415, 304, 378)
     btn_y = (160, 105, 160, 205, 285, 309, 378, 288)
-    labelpos_x = (162, 447, 629, 715, 634, 343, 265, 161)
-    labelpos_y = (143, 75, 143, 220, 304, 397, 330, 304)
+    labelpos_x = (163, 223, 447, 578, 633, 578, 343, 223)
+    labelpos_y = (225, 122, 75, 122, 225, 339, 397, 339)
 
     def __init__(self, parent, heropos, vilpos, situation_index, herocards, theme, **kwargs):
         tk.Canvas.__init__(self, parent, width=765, height=440, bg=theme.bgcolor, highlightbackground=theme.bgcolor, highlightcolor=theme.bgcolor, highlightthickness=0, bd=0)
