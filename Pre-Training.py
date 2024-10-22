@@ -486,26 +486,47 @@ class RangeEdit(tk.Frame):
         if not os.path.isdir('Range Packages\\' + range_dir):
             create_rp_name(range_dir)
 
+        # UTG
+        date1 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\Open-UTG.txt'))
+        date2 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\Call-UTG.txt'))
+        date = max(date1, date2)
+        self.fileTree.insert("dir1", "end", 'A', text="UTG", values=(f"{date:%Y-%m-%d %H:%M}"), tags=("0", "UTG", "BB"))
+
+        # EP
         date1 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\Open-EP.txt'))
         date2 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\Call-EP.txt'))
-        date = max(date1,date2)
-        self.fileTree.insert("dir1", "end", 'A', text="EP",values=(f"{date:%Y-%m-%d %H:%M}"),tags = ("0","EP","BB"))
+        date = max(date1, date2)
+        self.fileTree.insert("dir1", "end", 'B', text="EP", values=(f"{date:%Y-%m-%d %H:%M}"), tags=("0", "EP", "BB"))
+
+        # MP
         date1 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\Open-MP.txt'))
         date2 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\Call-MP.txt'))
-        date = max(date1,date2)
-        self.fileTree.insert("dir1", "end", 'B', text="MP",values=(f"{date:%Y-%m-%d %H:%M}"),tags = ("0","MP","BB"))
+        date = max(date1, date2)
+        self.fileTree.insert("dir1", "end", 'C', text="MP", values=(f"{date:%Y-%m-%d %H:%M}"), tags=("0", "MP", "BB"))
+
+        # HJ
+        date1 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\Open-HJ.txt'))
+        date2 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\Call-HJ.txt'))
+        date = max(date1, date2)
+        self.fileTree.insert("dir1", "end", 'D', text="HJ", values=(f"{date:%Y-%m-%d %H:%M}"), tags=("0", "HJ", "BB"))
+
+        # CO
         date1 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\Open-CO.txt'))
         date2 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\Call-CO.txt'))
-        date = max(date1,date2)
-        self.fileTree.insert("dir1", "end", 'C', text="CO",values=(f"{date:%Y-%m-%d %H:%M}"),tags = ("0","CO","BB"))
+        date = max(date1, date2)
+        self.fileTree.insert("dir1", "end", 'E', text="CO", values=(f"{date:%Y-%m-%d %H:%M}"), tags=("0", "CO", "BB"))
+
+        # BN
         date1 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\Open-BN.txt'))
         date2 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\Call-BN.txt'))
-        date = max(date1,date2)
-        self.fileTree.insert("dir1", "end", 'D', text="BN",values=(f"{date:%Y-%m-%d %H:%M}"),tags = ("0","BN","BB"))
+        date = max(date1, date2)
+        self.fileTree.insert("dir1", "end", 'F', text="BN", values=(f"{date:%Y-%m-%d %H:%M}"), tags=("0", "BN", "BB"))
+
+        # SB
         date1 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\Open-SB.txt'))
         date2 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\Call-SB.txt'))
-        date = max(date1,date2)
-        self.fileTree.insert("dir1", "end", 'E', text="SB",values=(f"{date:%Y-%m-%d %H:%M}"),tags = ("0","SB","BB"))
+        date = max(date1, date2)
+        self.fileTree.insert("dir1", "end", 'G', text="SB", values=(f"{date:%Y-%m-%d %H:%M}"), tags=("0", "SB", "BB"))
 
         date1 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\3Bet-MPvsEP.txt'))
         date2 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\Flat-MPvsEP.txt'))
