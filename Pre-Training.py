@@ -701,172 +701,172 @@ class RangeEdit(tk.Frame):
 
 
 
+        # UTG vs EP
         date1 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\4Bet-UTGvsEP.txt'))
         date2 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\Call3bet-UTGvsEP.txt'))
         date = max(date1, date2)
-        # UTG vs EP
         self.fileTree.insert("dir3", "end", 'A2', text="UTG vs EP", values=(f"{date:%Y-%m-%d %H:%M}"), tags=("2", "UTG", "EP"))
 
+        # UTG vs MP
         date1 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\4Bet-UTGvsMP.txt'))
         date2 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\Call3bet-UTGvsMP.txt'))
         date = max(date1, date2)
-        # UTG vs MP
         self.fileTree.insert("dir3", "end", 'B2', text="UTG vs MP", values=(f"{date:%Y-%m-%d %H:%M}"), tags=("2", "UTG", "MP"))
 
+        # UTG vs HJ
         date1 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\4Bet-UTGvsHJ.txt'))
         date2 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\Call3bet-UTGvsHJ.txt'))
         date = max(date1, date2)
-        # UTG vs HJ
         self.fileTree.insert("dir3", "end", 'C2', text="UTG vs HJ", values=(f"{date:%Y-%m-%d %H:%M}"), tags=("2", "UTG", "HJ"))
 
+        # UTG vs CO
         date1 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\4Bet-UTGvsCO.txt'))
         date2 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\Call3bet-UTGvsCO.txt'))
         date = max(date1, date2)
-        # UTG vs CO
         self.fileTree.insert("dir3", "end", 'D2', text="UTG vs CO", values=(f"{date:%Y-%m-%d %H:%M}"), tags=("2", "UTG", "CO"))
 
+        # UTG vs BN
         date1 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\4Bet-UTGvsBN.txt'))
         date2 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\Call3bet-UTGvsBN.txt'))
         date = max(date1, date2)
-        # UTG vs BN
         self.fileTree.insert("dir3", "end", 'E2', text="UTG vs BN", values=(f"{date:%Y-%m-%d %H:%M}"), tags=("2", "UTG", "BN"))
 
+        # UTG vs SB
         date1 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\4Bet-UTGvsSB.txt'))
         date2 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\Call3bet-UTGvsSB.txt'))
         date = max(date1, date2)
-        # UTG vs SB
         self.fileTree.insert("dir3", "end", 'F2', text="UTG vs SB", values=(f"{date:%Y-%m-%d %H:%M}"), tags=("2", "UTG", "SB"))
 
+        # UTG vs BB
         date1 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\4Bet-UTGvsBB.txt'))
         date2 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\Call3bet-UTGvsBB.txt'))
         date = max(date1, date2)
-        # UTG vs BB
         self.fileTree.insert("dir3", "end", 'G2', text="UTG vs BB", values=(f"{date:%Y-%m-%d %H:%M}"), tags=("2", "UTG", "BB"))
 
+        # EP vs MP
         date1 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\4Bet-EPvsMP.txt'))
         date2 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\Call3bet-EPvsMP.txt'))
         date = max(date1, date2)
-        # EP vs MP
         self.fileTree.insert("dir3", "end", 'H2', text="EP vs MP", values=(f"{date:%Y-%m-%d %H:%M}"), tags=("2", "EP", "MP"))
 
+        # EP vs HJ
         date1 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\4Bet-EPvsHJ.txt'))
         date2 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\Call3bet-EPvsHJ.txt'))
         date = max(date1, date2)
-        # EP vs HJ
         self.fileTree.insert("dir3", "end", 'I2', text="EP vs HJ", values=(f"{date:%Y-%m-%d %H:%M}"), tags=("2", "EP", "HJ"))
 
+        # EP vs CO
         date1 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\4Bet-EPvsCO.txt'))
         date2 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\Call3bet-EPvsCO.txt'))
         date = max(date1, date2)
-        # EP vs CO
         self.fileTree.insert("dir3", "end", 'J2', text="EP vs CO", values=(f"{date:%Y-%m-%d %H:%M}"), tags=("2", "EP", "CO"))
 
+        # EP vs BN
         date1 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\4Bet-EPvsBN.txt'))
         date2 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\Call3bet-EPvsBN.txt'))
         date = max(date1, date2)
-        # EP vs BN
         self.fileTree.insert("dir3", "end", 'K2', text="EP vs BN", values=(f"{date:%Y-%m-%d %H:%M}"), tags=("2", "EP", "BN"))
 
+        # EP vs SB
         date1 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\4Bet-EPvsSB.txt'))
         date2 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\Call3bet-EPvsSB.txt'))
         date = max(date1, date2)
-        # EP vs SB
         self.fileTree.insert("dir3", "end", 'L2', text="EP vs SB", values=(f"{date:%Y-%m-%d %H:%M}"), tags=("2", "EP", "SB"))
 
+        # EP vs BB
         date1 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\4Bet-EPvsBB.txt'))
         date2 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\Call3bet-EPvsBB.txt'))
         date = max(date1, date2)
-        # EP vs BB
         self.fileTree.insert("dir3", "end", 'M2', text="EP vs BB", values=(f"{date:%Y-%m-%d %H:%M}"), tags=("2", "EP", "BB"))
 
+        # MP vs HJ
         date1 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\4Bet-MPvsHJ.txt'))
         date2 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\Call3bet-MPvsHJ.txt'))
         date = max(date1, date2)
-        # MP vs HJ
         self.fileTree.insert("dir3", "end", 'N2', text="MP vs HJ", values=(f"{date:%Y-%m-%d %H:%M}"), tags=("2", "MP", "HJ"))
 
+        # MP vs CO
         date1 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\4Bet-MPvsCO.txt'))
         date2 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\Call3bet-MPvsCO.txt'))
         date = max(date1, date2)
-        # MP vs CO
         self.fileTree.insert("dir3", "end", 'O2', text="MP vs CO", values=(f"{date:%Y-%m-%d %H:%M}"), tags=("2", "MP", "CO"))
 
+        # MP vs BN
         date1 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\4Bet-MPvsBN.txt'))
         date2 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\Call3bet-MPvsBN.txt'))
         date = max(date1, date2)
-        # MP vs BN
         self.fileTree.insert("dir3", "end", 'P2', text="MP vs BN", values=(f"{date:%Y-%m-%d %H:%M}"), tags=("2", "MP", "BN"))
 
+        # MP vs SB
         date1 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\4Bet-MPvsSB.txt'))
         date2 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\Call3bet-MPvsSB.txt'))
         date = max(date1, date2)
-        # MP vs SB
         self.fileTree.insert("dir3", "end", 'Q2', text="MP vs SB", values=(f"{date:%Y-%m-%d %H:%M}"), tags=("2", "MP", "SB"))
 
+        # MP vs BB
         date1 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\4Bet-MPvsBB.txt'))
         date2 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\Call3bet-MPvsBB.txt'))
         date = max(date1, date2)
-        # MP vs BB
         self.fileTree.insert("dir3", "end", 'R2', text="MP vs BB", values=(f"{date:%Y-%m-%d %H:%M}"), tags=("2", "MP", "BB"))
 
+        # HJ vs CO
         date1 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\4Bet-HJvsCO.txt'))
         date2 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\Call3bet-HJvsCO.txt'))
         date = max(date1, date2)
-        # HJ vs CO
         self.fileTree.insert("dir3", "end", 'S2', text="HJ vs CO", values=(f"{date:%Y-%m-%d %H:%M}"), tags=("2", "HJ", "CO"))
 
+        # HJ vs BN
         date1 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\4Bet-HJvsBN.txt'))
         date2 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\Call3bet-HJvsBN.txt'))
         date = max(date1, date2)
-        # HJ vs BN
         self.fileTree.insert("dir3", "end", 'T2', text="HJ vs BN", values=(f"{date:%Y-%m-%d %H:%M}"), tags=("2", "HJ", "BN"))
 
+        # HJ vs SB
         date1 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\4Bet-HJvsSB.txt'))
         date2 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\Call3bet-HJvsSB.txt'))
         date = max(date1, date2)
-        # HJ vs SB
         self.fileTree.insert("dir3", "end", 'U2', text="HJ vs SB", values=(f"{date:%Y-%m-%d %H:%M}"), tags=("2", "HJ", "SB"))
 
+        # HJ vs BB
         date1 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\4Bet-HJvsBB.txt'))
         date2 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\Call3bet-HJvsBB.txt'))
         date = max(date1, date2)
-        # HJ vs BB
         self.fileTree.insert("dir3", "end", 'V2', text="HJ vs BB", values=(f"{date:%Y-%m-%d %H:%M}"), tags=("2", "HJ", "BB"))
 
+        # CO vs BN
         date1 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\4Bet-COvsBN.txt'))
         date2 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\Call3bet-COvsBN.txt'))
         date = max(date1, date2)
-        # CO vs BN
         self.fileTree.insert("dir3", "end", 'W2', text="CO vs BN", values=(f"{date:%Y-%m-%d %H:%M}"), tags=("2", "CO", "BN"))
 
+        # CO vs SB
         date1 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\4Bet-COvsSB.txt'))
         date2 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\Call3bet-COvsSB.txt'))
         date = max(date1, date2)
-        # CO vs SB
         self.fileTree.insert("dir3", "end", 'X2', text="CO vs SB", values=(f"{date:%Y-%m-%d %H:%M}"), tags=("2", "CO", "SB"))
 
+        # CO vs BB
         date1 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\4Bet-COvsBB.txt'))
         date2 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\Call3bet-COvsBB.txt'))
         date = max(date1, date2)
-        # CO vs BB
         self.fileTree.insert("dir3", "end", 'Y2', text="CO vs BB", values=(f"{date:%Y-%m-%d %H:%M}"), tags=("2", "CO", "BB"))
 
+        # BN vs SB
         date1 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\4Bet-BNvsSB.txt'))
         date2 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\Call3bet-BNvsSB.txt'))
         date = max(date1, date2)
-        # BN vs SB
         self.fileTree.insert("dir3", "end", 'Z2', text="BN vs SB", values=(f"{date:%Y-%m-%d %H:%M}"), tags=("2", "BN", "SB"))
 
+        # BN vs BB
         date1 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\4Bet-BNvsBB.txt'))
         date2 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\Call3bet-BNvsBB.txt'))
         date = max(date1, date2)
-        # BN vs BB
         self.fileTree.insert("dir3", "end", 'AA2', text="BN vs BB", values=(f"{date:%Y-%m-%d %H:%M}"), tags=("2", "BN", "BB"))
 
+        # SB vs BB
         date1 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\4Bet-SBvsBB.txt'))
         date2 = dt.datetime.fromtimestamp(os.path.getmtime('Range Packages\\' + range_dir + '\\Call3bet-SBvsBB.txt'))
         date = max(date1, date2)
-        # SB vs BB
         self.fileTree.insert("dir3", "end", 'AB2', text="SB vs BB", values=(f"{date:%Y-%m-%d %H:%M}"), tags=("2", "SB", "BB"))
 
 
