@@ -18,7 +18,7 @@ class TableReplay(tk.Canvas):
     btn_x = (344, 516, 564, 526, 425, 230, 170, 222)
     btn_y = (107, 135, 225, 283, 309, 299, 231, 135)
 
-    labelpos_x = (163, 223, 447, 578, 633, 578, 343, 223)
+    labelpos_x = (148, 208, 432, 563, 618, 563, 328, 208)
     labelpos_y = (225, 122, 75, 122, 225, 339, 397, 339)
 
     def __init__(self, parent, heropos, vilpos, situation_index, herocards, theme, **kwargs):
@@ -57,7 +57,7 @@ class TableReplay(tk.Canvas):
         self.poslabels = []
         for i, pos in enumerate(TableReplay.pos_str):
             strdraw_idx = (heropos_idx + 2 + i) % len(TableReplay.pos_str)
-            self.poslabels.append(self.create_text(TableReplay.labelpos_x[i], TableReplay.labelpos_y[i], text=TableReplay.pos_str[strdraw_idx], anchor='e', font=("Helvetica", 16, 'bold'), fill='white'))
+            self.poslabels.append(self.create_text(TableReplay.labelpos_x[i], TableReplay.labelpos_y[i], text=TableReplay.pos_str[strdraw_idx], anchor='center', font=("Helvetica", 10, 'bold'), fill='white'))
 
         # post sb and bb and btn marker
         strdraw_idx = (5 - heropos_idx) % len(TableReplay.pos_str)
@@ -70,7 +70,9 @@ class TableReplay(tk.Canvas):
         self.itemconfigure(self.sb_img, state='hidden')
         self.itemconfigure(self.bb_img, state='hidden')
         self.itemconfigure(self.btn_img, state='hidden')
-        
+
+
+
         # place bet amounts depending on preflop situation
         vilpos_idx = TableReplay.pos_str.index(self.vilpos)
         if self.situation_index == 1:
@@ -116,28 +118,6 @@ class TableReplay(tk.Canvas):
         strdraw_idx = (4 - heropos_idx) % 8  # Обновлено на 8
         self.btn_img = self.create_image(TableReplay.btn_x[strdraw_idx], TableReplay.btn_y[strdraw_idx], anchor='nw', image=self.bn_marker)
         
-        # # update raise and open chips, and delete overlapping images
-        # if self.vilchips_img:
-        #     self.delete(self.vilchips_img)
-        # if self.herochips_img:
-        #     self.delete(self.herochips_img)
-            
-        # if self.situation_index == 1:
-        #     strdraw_idx = (vilpos_idx + 4 - heropos_idx) % 8  # Обновлено на 8
-        #     self.vilchips_img = self.create_image(TableReplay.chippos_x[strdraw_idx], TableReplay.chippos_y[strdraw_idx], anchor='nw', image=self.chips_2p5bb)
-        # elif self.situation_index == 2:
-        #     strdraw_idx = 4
-        #     self.herochips_img = self.create_image(TableReplay.chippos_x[strdraw_idx], TableReplay.chippos_y[strdraw_idx], anchor='nw', image=self.chips_2p5bb)
-        #     strdraw_idx = (vilpos_idx + 4 - heropos_idx) % 8  # Обновлено на 8
-        #     self.vilchips_img = self.create_image(TableReplay.chippos_x[strdraw_idx], TableReplay.chippos_y[strdraw_idx], anchor='nw', image=self.chips_8bb)
-        # else:
-        #     strdraw_idx = 4
-        #     self.herochips_img = self.create_image(TableReplay.chippos_x[strdraw_idx], TableReplay.chippos_y[strdraw_idx], anchor='nw', image=self.chips_8bb)
-        #     strdraw_idx = (vilpos_idx + 4 - heropos_idx) % 8  # Обновлено на 8
-        #     self.vilchips_img = self.create_image(TableReplay.chippos_x[strdraw_idx], TableReplay.chippos_y[strdraw_idx], anchor='nw', image=self.chips_22bb) 
-
-
-
 
 
         # update raise and open chips, and delete overlapping images
@@ -179,11 +159,6 @@ class TableReplay(tk.Canvas):
             if vilpos_idx == 1:
                 self.delete(self.sb_img)
             
-
-
-
-
-
 
 
         # draw hand
