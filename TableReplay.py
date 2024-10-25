@@ -22,7 +22,7 @@ class TableReplay(tk.Canvas):
     labelpos_y = (225, 122, 75, 122, 225, 339, 397, 339)
 
     def __init__(self, parent, heropos, vilpos, situation_index, herocards, theme, **kwargs):
-        tk.Canvas.__init__(self, parent, width=765, height=440, bg=theme.bgcolor, highlightbackground=theme.bgcolor, highlightcolor=theme.bgcolor, highlightthickness=0, bd=0)
+        tk.Canvas.__init__(self, parent, width=1078, height=662, bg=theme.bgcolor, highlightbackground=theme.bgcolor, highlightcolor=theme.bgcolor, highlightthickness=0, bd=0)
 
         # defines the preflop situation/positions
         self.heropos = heropos
@@ -48,9 +48,11 @@ class TableReplay(tk.Canvas):
         self.suit_s = tk.PhotoImage(file=f'{img_dir}\\suit_s.png')
         self.blank = tk.PhotoImage(file=f'{img_dir}\\blank.png')
         
+
+        # !Размер картинки и стола (1078х662)
         # draw table template
         self.grid(row=0, column=0, sticky='w')
-        self.create_image(10, 10, anchor='nw', image=self.ptable)
+        self.create_image(539, 331, anchor='center', image=self.ptable)
         
         # draw position labels
         heropos_idx = TableReplay.pos_str.index(self.heropos)

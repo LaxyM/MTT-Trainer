@@ -93,7 +93,8 @@ class PreflopTrain(tk.Tk):
         tk.Tk.__init__(self, *args, **kwargs)
         ws = self.winfo_screenwidth()
         hs = self.winfo_screenheight()
-        self.geometry('%dx%d+%d+%d' % (3*ws/4, 3*hs/4, 1*ws/8, 1*hs/8))
+        # ! Ширина приложения
+        self.geometry('%dx%d+%d+%d' % (int(ws*0.8), int(hs*0.8), int(ws*0.1), int(hs*0.1)))
         self.withdraw()
 
         splash = Splash(self)
@@ -202,9 +203,9 @@ class StartPage(tk.Frame):
         self.foldBtn = cButton(trainingInterface, '          Fold         ', lambda: self.purefold(self), theme)
         self.sgraph.grid(row=0, column=0, columnspan=3, padx=0, pady=1)
         self.okayBtn.grid(row=0, column=3, padx=5, pady=2, sticky='S')
-        self.raiseBtn.grid(row=1, column=0, padx=3, pady=2)
+        self.raiseBtn.grid(row=1, column=2, padx=3, pady=2)
         self.callBtn.grid(row=1, column=1, padx=3, pady=2)
-        self.foldBtn.grid(row=1, column=2, padx=3, pady=2)
+        self.foldBtn.grid(row=1, column=0, padx=3, pady=2)
         self.sgraph.grid_remove()
         self.okayBtn.grid_remove()
         self.raiseBtn.grid_remove()
@@ -218,12 +219,12 @@ class StartPage(tk.Frame):
         self.statuslabel = tk.Label(self, textvariable=self.statusvar, bd=1, relief='sunken', anchor='w')
         self.statuslabel.grid(row=3, column=0, sticky='SEW')
 
-        # *** grid configure ***
+        #! *** grid configure *** размер сетки определяется тут
         self.columnconfigure(0, weight=1)
         self.rowconfigure(0, weight=1, uniform='x')
         self.rowconfigure(1, weight=2, uniform='x')
-        self.rowconfigure(2, weight=10, uniform='x')
-        self.rowconfigure(3, weight=3, uniform='x')
+        self.rowconfigure(2, weight=20, uniform='x')
+        self.rowconfigure(3, weight=4, uniform='x')
 
         # *** key binds ***
         self.bind_all("f", self.purefold)
