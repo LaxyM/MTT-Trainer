@@ -102,7 +102,7 @@ class PreflopTrain(tk.Tk):
         splash.destroy()
 
         tk.Tk.iconbitmap(self, "icon.ico")
-        tk.Tk.wm_title(self, "6-max Preflop Range Training")
+        tk.Tk.wm_title(self, "8-max Preflop Range Training")
 
         container = tk.Frame(self)
         container.pack(side="top", fill="both", expand=True)

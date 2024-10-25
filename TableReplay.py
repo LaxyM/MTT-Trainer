@@ -59,7 +59,7 @@ class TableReplay(tk.Canvas):
         self.poslabels = []
         for i, pos in enumerate(TableReplay.pos_str):
             strdraw_idx = (heropos_idx + 2 + i) % len(TableReplay.pos_str)
-            self.poslabels.append(self.create_text(TableReplay.labelpos_x[i], TableReplay.labelpos_y[i], text=TableReplay.pos_str[strdraw_idx], anchor='center', font=("Helvetica", 10, 'bold'), fill='white'))
+            self.poslabels.append(self.create_text(TableReplay.labelpos_x[i], TableReplay.labelpos_y[i], text=TableReplay.pos_str[strdraw_idx], anchor='center', font=("Helvetica", 17, 'bold'), fill='#72727C'))
 
         # post sb and bb and btn marker
         strdraw_idx = (5 - heropos_idx) % len(TableReplay.pos_str)
