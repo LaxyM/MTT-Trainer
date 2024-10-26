@@ -12,14 +12,14 @@ class TableReplay(tk.Canvas):
     suits = {'c': '#00A318', 's': '#000000', 'h': '#FF3333', 'd': '#0093FB'}
     
     # Обновленные координаты для 8-макс стола
-    chippos_x = (357, 459, 504, 459, 357, 239, 194, 239)
-    chippos_y = (106, 137, 200, 253, 273, 253, 200, 137)
+    chippos_x = (517, 716, 780, 690, 517, 320, 242, 320)
+    chippos_y = (149, 187, 293, 385, 407, 380, 303, 187)
 
-    btn_x = (344, 516, 564, 526, 425, 230, 170, 222)
-    btn_y = (107, 135, 225, 283, 309, 299, 231, 135)
+    btn_x = (638, 834, 895, 724, 434, 287, 176, 326)
+    btn_y = (125, 198, 355, 479, 502, 454, 238, 146)
 
-    labelpos_x = (148, 208, 432, 563, 618, 563, 328, 208)
-    labelpos_y = (225, 122, 75, 122, 225, 339, 397, 339)
+    labelpos_x = (107, 221, 540, 862, 973, 862, 492, 217)
+    labelpos_y = (320, 157, 102, 157, 314, 516, 574, 510)
 
     def __init__(self, parent, heropos, vilpos, situation_index, herocards, theme, **kwargs):
         tk.Canvas.__init__(self, parent, width=1078, height=662, bg=theme.bgcolor, highlightbackground=theme.bgcolor, highlightcolor=theme.bgcolor, highlightthickness=0, bd=0)
